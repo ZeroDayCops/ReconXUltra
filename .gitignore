@@ -1,0 +1,58 @@
+# ═══════════════════════════════════════════════
+# ReconX Ultra X — .gitignore
+# ═══════════════════════════════════════════════
+
+# Scan output (contains target data — never commit)
+reconx/output/
+output/
+
+# Logs
+reconx/logs/
+logs/
+*.log
+
+# Config with API keys
+reconx/configs/local.yaml
+reconx/configs/*.local.yaml
+
+# Auth profiles with tokens
+reconx/configs/auth_profiles/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS
+Thumbs.db
+.Trash-*
+
+# Lock files from concurrent scans
+reconx/.locks/
+.locks/
+
+# Downloaded tools (user installs locally)
+reconx/tools/
+tools/
+
+# Temp
+*.tmp
+*.bak

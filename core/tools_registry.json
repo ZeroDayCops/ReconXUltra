@@ -1,0 +1,110 @@
+{
+  "dalfox": {
+    "name": "dalfox",
+    "found": true,
+    "path": "/home/b1t3x0p/go/bin/dalfox",
+    "version": "",
+    "type": "binary",
+    "health": "ok",
+    "required": false
+  },
+  "nuclei": {
+    "name": "nuclei",
+    "found": true,
+    "path": "/usr/bin/nuclei",
+    "version": "",
+    "type": "binary",
+    "health": "ok",
+    "required": true
+  },
+  "httpx": {
+    "name": "httpx",
+    "found": true,
+    "path": "/usr/bin/httpx",
+    "version": "",
+    "type": "binary",
+    "health": "ok",
+    "required": true
+  },
+  "subfinder": {
+    "name": "subfinder",
+    "found": true,
+    "path": "/usr/bin/subfinder",
+    "version": "",
+    "type": "binary",
+    "health": "ok",
+    "required": true
+  },
+  "katana": {
+    "name": "katana",
+    "found": true,
+    "path": "/home/b1t3x0p/go/bin/katana",
+    "version": "",
+    "type": "binary",
+    "health": "ok",
+    "required": false
+  },
+  "naabu": {
+    "name": "naabu",
+    "found": true,
+    "path": "/usr/bin/naabu",
+    "version": "",
+    "type": "binary",
+    "health": "ok",
+    "required": false
+  },
+  "ffuf": {
+    "name": "ffuf",
+    "found": true,
+    "path": "/usr/bin/ffuf",
+    "version": "ffuf version: 2.1.0-dev",
+    "type": "binary",
+    "health": "ok",
+    "required": false
+  },
+  "sqlmap": {
+    "name": "sqlmap",
+    "found": true,
+    "path": "/usr/bin/sqlmap",
+    "version": "1.10.4#stable",
+    "type": "binary",
+    "health": "ok",
+    "required": false
+  },
+  "gf": {
+    "name": "gf",
+    "found": true,
+    "path": "/home/b1t3x0p/go/bin/gf",
+    "version": "",
+    "type": "binary",
+    "health": "ok",
+    "required": false
+  },
+  "qsreplace": {
+    "name": "qsreplace",
+    "found": false,
+    "path": "",
+    "version": "",
+    "type": "binary",
+    "health": "missing",
+    "required": false
+  },
+  "loxs": {
+    "name": "loxs",
+    "found": false,
+    "path": "",
+    "version": "",
+    "type": "python_local",
+    "health": "missing",
+    "required": false
+  },
+  "xsstrike": {
+    "name": "xsstrike",
+    "found": false,
+    "path": "",
+    "version": "",
+    "type": "python_local",
+    "health": "missing",
+    "required": false
+  }
+}

@@ -1,0 +1,87 @@
+# ============================================================================
+# ReconX Ultra — Aggressive Configuration
+# ============================================================================
+# High-speed, high-coverage recon for bug bounty programs.
+# WARNING: This generates significant traffic. Use responsibly.
+# ============================================================================
+
+general:
+  threads: 100
+  rate_limit: 300
+  timeout: 20
+  retries: 2
+  debug: false
+  resume: true
+  notify: true
+  performance_mode: aggressive
+
+api:
+  shodan: ""
+  censys_id: ""
+  censys_secret: ""
+  virustotal: ""
+  securitytrails: ""
+  chaos: ""
+  github_token: ""
+  urlscan: ""
+  hunter: ""
+  whoisxml: ""
+
+notify:
+  telegram_token: ""
+  telegram_chat_id: ""
+  discord_webhook: ""
+  slack_webhook: ""
+
+# All modules enabled for maximum coverage
+modules:
+  subdomains: true
+  live: true
+  urls: true
+  dedup: true
+  js: true
+  content: true
+  nuclei: true
+  screenshots: true
+  ports: true
+  takeover: true
+  cors: true
+  wordpress: true
+  api: true
+  intelligence: true
+  exploit: true
+  validation: true
+  reporting: true
+
+tools:
+  subfinder: "subfinder"
+  httpx: "httpx"
+  nuclei: "nuclei"
+  katana: "katana"
+  naabu: "naabu"
+  ffuf: "ffuf"
+  dnsx: "dnsx"
+  gau: "gau"
+  hakrawler: "hakrawler"
+
+# Wordlist categories to enable (auto = detect from tech)
+wordlists:
+  subdomains: ""
+  content: ""
+  params: ""
+  vhosts: ""
+  auto_select: true
+  max_fuzz_hosts: 100
+  max_payloads_per_vuln: 50
+
+nuclei:
+  severity: "critical,high,medium,low"
+  concurrency: 50
+  rate_limit: 300
+  bulk_size: 50
+  templates_dir: ""
+
+output:
+  format: "all"
+  screenshots: true
+  json: true

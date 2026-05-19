@@ -1,0 +1,13 @@
+# ReconX Ultra X Plugin Manifest
+name: js_secret_hunter
+version: 1.0.0
+description: Advanced JS secret hunting with entropy analysis and live validation
+author: ReconX
+enabled: true
+
+hooks:
+  - post_intelligence
+
+dependencies:
+  - httpx
+  - curl

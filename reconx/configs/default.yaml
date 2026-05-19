@@ -1,0 +1,175 @@
+# ============================================================================
+# ReconX Ultra — Default Configuration
+# ============================================================================
+# Copy this file and customize for your environment.
+# ============================================================================
+
+# ── General Settings ────────────────────────────────────────────────────────
+general:
+  threads: 50
+  rate_limit: 150
+  timeout: 30
+  retries: 3
+  debug: false
+  resume: true
+  notify: true
+
+
+api:
+  shodan: ""
+  censys_id: ""
+  censys_secret: ""
+  virustotal: ""
+  securitytrails: ""
+  chaos: ""
+  github_token: ""
+  urlscan: ""
+  hunter: ""
+  whoisxml: ""
+
+notify:
+  telegram_token: ""
+  telegram_chat_id: ""
+  discord_webhook: ""
+  slack_webhook: ""
+
+
+# ── Module Toggles ─────────────────────────────────────────────────────────
+# Enable or disable individual modules.
+modules:
+  subdomains: true
+  live: true
+  urls: true
+  dedup: true
+  js: true
+  content: false
+  nuclei: true
+  screenshots: true
+  ports: false
+  takeover: true
+  cors: true
+  wordpress: false
+  api: true
+  intelligence: true
+  exploit: true
+  validation: true
+  params: true
+  reporting: true
+
+# ── Tool Paths ──────────────────────────────────────────────────────────────
+# Override auto-detected tool paths if needed.
+tools:
+  subfinder: "subfinder"
+  httpx: "httpx"
+  nuclei: "nuclei"
+  katana: "katana"
+  naabu: "naabu"
+  ffuf: "ffuf"
+  dnsx: "dnsx"
+  gau: "gau"
+  hakrawler: "hakrawler"
+
+# ── Wordlists ──────────────────────────────────────────────────────────────
+# Custom wordlist paths (leave empty for auto-detection).
+wordlists:
+  subdomains: ""
+  content: ""
+  params: ""
+  vhosts: ""
+  auto_select: true
+  max_fuzz_hosts: 30
+  max_payloads_per_vuln: 30
+
+# ── Nuclei Settings ────────────────────────────────────────────────────────
+nuclei:
+  severity: "critical,high,medium"
+  concurrency: 25
+  rate_limit: 150
+  bulk_size: 25
+  templates_dir: ""
+
+# ── Output Settings ────────────────────────────────────────────────────────
+output:
+  format: "all"
+  screenshots: true
+  json: true
+
+# ── Hunter Intelligence OS ─────────────────────────────────────────────────
+# Configure the autonomous hunting system.
+hunter:
+  default_mode: "full"
+  autopilot: false
+  confidence_threshold: 40
+  max_reasoning_cycles: 3
+  generate_dna: true
+  generate_strategy: true
+  surface_ranking: true
+  chain_prediction: true
+
+# ── Monitoring Mode ────────────────────────────────────────────────────────
+monitor:
+  enabled: false
+  interval_minutes: 30
+  alert_on_new_apis: true
+  alert_on_new_secrets: true
+  alert_on_new_subdomains: true
+
+# ── Auth Profiles ──────────────────────────────────────────────────────────
+auth:
+  active_profile: ""
+  profiles_dir: "configs/auth_profiles"
+
+# ── Plugin System ──────────────────────────────────────────────────────────
+plugins:
+  enabled: true
+  directory: "plugins"
+  auto_discover: true
+
+# ── Notifications ──────────────────────────────────────────────────────────
+notifications:
+  telegram: true
+  slack: false
+  alert_on_findings: true
+  alert_on_secrets: true
+  alert_on_chains: true
+  alert_on_reasoning: true
+  min_confidence_alert: 30
+  suppress_duplicates: true
+
+# ── Intelligence Engine ────────────────────────────────────────────────────
+intelligence:
+  smart_gf: true
+  target_dna: true
+  surface_ranking: true
+  observed_signals: true
+  micro_validation: true
+  workflow_evidence: true
+  reasoning_engine: true
+  attack_paths: true
+  reasoning_traces: true
+  dynamic_strategy: true
+  max_probe_urls: 50
+  max_probe_workers: 8
+  probe_timeout: 5
+  min_attack_path_evidence: 2
+
+# ── Exploit Engine ─────────────────────────────────────────────────────────
+exploit:
+  xss_enabled: true
+  sqli_enabled: true
+  lfi_enabled: true
+  ssrf_enabled: true
+  ssti_enabled: true
+  dalfox_threads: 25
+  sqlmap_level: 3
+  sqlmap_risk: 2
+  loxs_enabled: true
+
+# ── Validation Engine ──────────────────────────────────────────────────────
+validation:
+  enabled: true
+  browser_validation: false
+  poc_generation: true
+  min_confidence: 40
+  dedup_findings: true
+
